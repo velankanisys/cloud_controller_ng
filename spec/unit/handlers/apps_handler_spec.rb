@@ -14,7 +14,7 @@ module VCAP::CloudController
       AppModel.make(name: app_1.name, space_guid: space_3.guid)
     end
 
-    it 'filters by access_context' do
+    it 'filters by access_contexts' do
       access_context = double(:access_context, roles: double(:roles, admin?: true))
       apps_repository = AppsRepository.new
 
